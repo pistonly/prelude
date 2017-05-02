@@ -25,6 +25,13 @@
 (define-key evil-insert-state-map (kbd "C-x o") 'ace-window)
 (define-key evil-visual-state-map (kbd "C-x o") 'ace-window)
 
+;; magit setting
+(defun magit-mode-config()
+  (local-set-key (kbd "|") 'magit-git-command);
+  )
+(add-hook 'magit-mode-hook 'magit-mode-config)
+;;(require 'evil-magit)
+
 ;; on to the visual settings
 (setq inhibit-splash-screen t)		; no splash screen, thanks
 ;(line-number-mode 1)			; have line numbers and
