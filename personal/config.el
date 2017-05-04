@@ -8,6 +8,7 @@
 (elpy-enable)
 (elpy-use-ipython)
 
+; mac
 ;(setq python-shell-interpreter "ipython")
 ;python-shell-interpreter-args "--simple-prompt -i")
 
@@ -25,6 +26,7 @@
 (define-key evil-normal-state-map (kbd "C-x o") 'ace-window)
 (define-key evil-insert-state-map (kbd "C-x o") 'ace-window)
 (define-key evil-visual-state-map (kbd "C-x o") 'ace-window)
+(evil-define-key 'normal elpy-mode-map (kbd "M-.") 'elpy-goto-definition)
 
 (setq evil-insert-state-cursor '("red" box))
 
