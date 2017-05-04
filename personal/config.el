@@ -6,9 +6,10 @@
 ;; elpy
 (package-initialize)
 (elpy-enable)
+(elpy-use-ipython)
 
-(setq python-shell-interpreter "ipython"
-      python-shell-interpreter-args "--simple-prompt -i")
+;(setq python-shell-interpreter "ipython")
+;python-shell-interpreter-args "--simple-prompt -i")
 
 ;; ace-window
 (setq aw-keys '(?a ?s ?d ?f ?j ?k ?l))
@@ -24,6 +25,8 @@
 (define-key evil-normal-state-map (kbd "C-x o") 'ace-window)
 (define-key evil-insert-state-map (kbd "C-x o") 'ace-window)
 (define-key evil-visual-state-map (kbd "C-x o") 'ace-window)
+
+(setq evil-insert-state-cursor '("red" box))
 
 ;; magit setting
 (defun magit-mode-config()
