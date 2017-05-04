@@ -80,3 +80,13 @@
 ;; Have C-y act as usual in term-mode, to avoid C-' C-y C-'
 ;; Well the real default would be C-c C-j C-y C-c C-k.
 (define-key term-raw-map  (kbd "C-y") 'term-paste)
+
+;; comment
+(global-set-key (kbd "C-c ;") 'comment-region)
+(global-set-key (kbd "C-c :") 'uncomment-region)
+
+;; theme
+(when (not (display-graphic-p)) (progn
+                                  (disable-theme 'zenburn)
+                                  (setq sml/theme 'dark)
+                                  (sml/setup)))
